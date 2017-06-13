@@ -12,27 +12,27 @@ cb , callback
 
 
 
-ex1-1)
+    ex1-1)
 
 
 
-var a = function( cb ) {  // 2번째 순서, 임의의 함수에 cb라는 인자값을 받고, cb에 123,c 인자를 넣어 함수를 실행시킵니다.
-    cb(123,c);
-}
+    var a = function( cb ) {  // 2번째 순서, 임의의 함수에 cb라는 인자값을 받고, cb에 123,c 인자를 넣어 함수를 실행시킵니다.
+      cb(123,c);
+    }
 
 
-var b = function( num, cb ) { // 3번째 순서, 임의의 함수에 num과 cb라는 인자값을 받고, num에 들어있는 정보를 출력후 함수 cb를 실행시킵니다.
-    console.log(num);
-    cb();
-}
+    var b = function( num, cb ) { // 3번째 순서, 임의의 함수에 num과 cb라는 인자값을 받고, num에 들어있는 정보를 출력후 함수 cb를 실행시킵니다.
+      console.log(num);
+      cb();
+    }
 
 
-var c = function( ) { // 4번째 순서, 임의의 함수를 실행시킵니다, cccc를 출력합니다.
-  console.log("cccc");
-}
+    var c = function( ) { // 4번째 순서, 임의의 함수를 실행시킵니다, cccc를 출력합니다.
+      console.log("cccc");
+    }
 
 
-a(b); // 1번째 순서, 함수 a에 b라는 인자를 넣어 함수를 실행시킵니다.
+    a(b); // 1번째 순서, 함수 a에 b라는 인자를 넣어 함수를 실행시킵니다.
 
 
 
@@ -66,27 +66,27 @@ a(b); // 1번째 순서, 함수 a에 b라는 인자를 넣어 함수를 실행�
 
 
 
-ex1-2)
+    ex1-2)
 
 
 
-var a = function( b ) {  // 2번째 순서, 첫번째 순서에서 a함수를 실행시킬때 b라는 인자값을 보냈으므로 받는인자 cb에는 b가 담깁니다, b라는 함수에 123,c라는 인자를 넣어 실행시킵니다.
-    b(123,c);
-}
+    var a = function( b ) {  // 2번째 순서, 첫번째 순서에서 a함수를 실행시킬때 b라는 인자값을 보냈으므로 받는인자 cb에는 b가 담깁니다, b라는 함수에 123,c라는 인자를 넣어 실행시킵니다.
+      b(123,c);
+    }
 
 
-var b = function( num, c ) { // 3번째 순서, num,c 에는 각각 123,c가 들어가고, num에는 123이 저장되어있으므로 123을 출력하고 c함수를 실행시킵니다.
-    console.log(123);
-    c();
-}
+    var b = function( num, c ) { // 3번째 순서, num,c 에는 각각 123,c가 들어가고, num에는 123이 저장되어있으므로 123을 출력하고 c함수를 실행시킵니다.
+      console.log(123);
+      c();
+    }
 
 
-var c = function( ) { // 4번째 순서, 받는인자,보내는인자 모두 없어서 cccc를 출력합니다
-  console.log("cccc");
-}
+    var c = function( ) { // 4번째 순서, 받는인자,보내는인자 모두 없어서 cccc를 출력합니다
+      console.log("cccc");
+    }
 
 
-a(b); // 1번째 순서, 함수 a에 b라는 인자를 넣어서 함수를 실행시킵니다.
+    a(b); // 1번째 순서, 함수 a에 b라는 인자를 넣어서 함수를 실행시킵니다.
 
 
 
@@ -115,25 +115,25 @@ a(b); // 1번째 순서, 함수 a에 b라는 인자를 넣어서 함수를 실�
 
 
 
-  ex2-1)
+    ex2-1)
 
 
 
-  var a = function( cb ) { // 2번째 순서, 임의의 함수에 cb라는 인자값을 받고, cb에 123 인자를 넣어 실행시킵니다.
-    cb(123,c);
-  }
+    var a = function( cb ) { // 2번째 순서, 임의의 함수에 cb라는 인자값을 받고, cb에 123 인자를 넣어 실행시킵니다.
+      cb(123,c);
+    }
 
 
-  var b = function( num, cb ) {
-    console.log(b);
-    cb();
-  }
+    var b = function( num, cb ) {
+      console.log(b);
+      cb();
+    }
 
 
-  var c = function( cb ) { // 3번째 순서, 임의의 함수에 cb라는 인자값을 받고, cccc를 출력후 cb에 b인자를 넣어 실행시킵니다.
-    console.log("cccc");
-    cb(b);
-  }
+    var c = function( cb ) { // 3번째 순서, 임의의 함수에 cb라는 인자값을 받고, cccc를 출력후 cb에 b인자를 넣어 실행시킵니다.
+      console.log("cccc");
+      cb(b);
+    }
 
 
   a(c); // 1번째 순서, a함수에 c라는 인자를 넣어 함수를 실행시킵니다.

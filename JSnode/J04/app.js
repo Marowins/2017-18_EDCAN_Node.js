@@ -38,7 +38,7 @@ app.get ( '/write/:text', function ( req, res ) {
 
 app.get ( '/show', function ( req, res ) {
     Posts.find({}, function ( err, result ) {
-        if ( err ) {
+    if ( err ) {
 			throw err;
 		} else {
 			res.send( result );
